@@ -19,7 +19,7 @@ function App() {
     }
   };
 
-  
+
   return (
     <div className="container">
       {/* <h1>Text Analyzer</h1> */}
