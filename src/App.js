@@ -12,7 +12,7 @@ function App() {
 
   const handleAnalyzeClick = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/analyze', { text });
+      const response = await axios.post(`${process.env.serverUrl}/analyze`, { text });
       setAnalysisResult(response.data.analysisResult);
     } catch (error) {
       console.error('Error analyzing text:', error.message);
