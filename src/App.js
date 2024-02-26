@@ -19,9 +19,10 @@ function App() {
     }
   };
 
+  
   return (
     <div className="container">
-      <h1>Text Analyzer App</h1>
+      {/* <h1>Text Analyzer</h1> */}
       <textarea rows="4" value={text} onChange={handleTextChange} />
       <br />
       <button onClick={handleAnalyzeClick}>Analyze Text</button>
@@ -34,7 +35,6 @@ function App() {
           <p>Number of words: {analysisResult.wordsCount}</p>
           <p>Number of sentences: {analysisResult.sentencesCount}</p>
           <p>Number of syllables: {analysisResult.syllablesCount}</p> */}
-
 
 
           <table>
