@@ -6,13 +6,15 @@ function App() {
   const [text, setText] = useState('');
   const [analysisResult, setAnalysisResult] = useState(null);
 
+  const serverUrl = 'https://text-analyzer-k1uj.onrender.com' || 'http://localhost:5000';
+
   const handleTextChange = (e) => {
     setText(e.target.value);
   };
 
   const handleAnalyzeClick = async () => {
     try {
-      const response = await axios.post(`${process.env.serverUrl}/analyze`, { text });
+      const response = await axios.post(`${serverUrl}/analyze`, { text });
       setAnalysisResult(response.data.analysisResult);
     } catch (error) {
       console.error('Error analyzing text:', error.message);
@@ -22,7 +24,7 @@ function App() {
 
   return (
     <div className="container">
-      {/* <h1>Text Analyzer</h1> */}
+      <h1>Text Analyzer</h1>
       <textarea rows="4" value={text} onChange={handleTextChange} />
       <br />
       <button onClick={handleAnalyzeClick}>Analyze Text</button>
