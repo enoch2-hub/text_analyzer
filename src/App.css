@@ -119,6 +119,6 @@ h2 {
 }
 @media (max-width: 600px) {
   .container {
-    width: 90%;
+    width: 60vw;
   }
 }
